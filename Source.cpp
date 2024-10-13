@@ -14,6 +14,7 @@ public:
 	void push(T val);
 	T pop();
 	T sTop();
+	~Stack();
 };
 int main()
 {
@@ -89,4 +90,9 @@ T Stack<T>::sTop()
 		return data[top];
 	}
 	exit(0);
+}
+template<typename T>
+Stack<T>::~Stack()
+{
+	delete[]data;
 }
