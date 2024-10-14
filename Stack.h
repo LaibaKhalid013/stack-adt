@@ -16,6 +16,7 @@ public:
 	T pop();
 	T peek();
 	int size();
+	~Stack();
 };
 #endif
 template<typename T>
@@ -90,5 +91,10 @@ template<typename T>
 int Stack<T>::size()
 {
 	return capacity;
+}
+template<typename T>
+Stack<T>::~Stack()
+{
+ 	delete[]data;
 }
 
